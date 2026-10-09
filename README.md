@@ -23,11 +23,10 @@
 4. Перезапустите терминал или выполните:
 
     source ~/.bashrc
-    ### Автоматический (рекомендуемый)
+## Автоматический (рекомендуемый)
 
 Склонируйте репозиторий и запустите установочный скрипт:
 
-```bash
 git clone https://github.com/print542/auto_command_downloader
 cd auto_command_downloader
 chmod +x install.sh
