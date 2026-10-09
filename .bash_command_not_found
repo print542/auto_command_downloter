@@ -1,0 +1,16 @@
+command_not_found_handle() {
+    local cmd="$1"
+    local pkg
+    pkg=$(pkgfile -b -v "$cmd" 2>/dev/null | head -n1 | awk -F/ '{print $NF}' | sed 's/\.pkg\.tar\..*//')
+
+    if [[ -n "$pkg" ]]; then
+        echo "command '$cmd' not found, package: $pkg"
+        read -p "Install? [y/N] " answer
+        if [ "$answer" = "y" ] || [ "$answer" = "Y" ]; then
+            sudo pacman -S "$pkg"
+        fi
+    else
+        echo "bash: $cmd: command not found"
+    fi
+    return 127
+}
