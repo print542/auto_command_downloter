@@ -12,32 +12,34 @@
   ``` cp .bash_command_not_found ~/```
 
 2. Установите pkgfile и обновите базу:
-
+```
     sudo pacman -S pkgfile
     sudo pkgfile --update
-
+```
 3. Добавьте строку в ~/.bashrc:
 
-    source ~/.bash_command_not_found
+    source ```~/.bash_command_not_found```
 
 4. Перезапустите терминал или выполните:
-
+```
     source ~/.bashrc
+```
 ## Автоматический (рекомендуемый)
 
 Склонируйте репозиторий и запустите установочный скрипт:
-
+```
 git clone https://github.com/print542/auto_command_downloader
 cd auto_command_downloader
 chmod +x install.sh
 ./install.sh
+```
 ## Использование
 
 Введите несуществующую команду, например:
-bash
-
+`bash`
+```
 $ firefox
-
+```
 Скрипт ответит:
 
 Команда 'firefox' не найдена. Она есть в пакете: firefox
@@ -47,5 +49,5 @@ $ firefox
 
 Чтобы отключить скрипт:
 
-Удалите файл:
-rm ~/.bash_command_not_found
+Удалите файл: 
+```rm ~/.bash_command_not_found```
