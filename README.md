@@ -9,7 +9,7 @@
  ### Ручная
 1. Скопируйте файл в домашнюю папку:
 
-   cp .bash_command_not_found ~/
+  ``` cp .bash_command_not_found ~/```
 
 2. Установите pkgfile и обновите базу:
 
